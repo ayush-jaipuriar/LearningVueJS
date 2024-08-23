@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div id="app">
+  <div id="app1">
     <h2 v-if="showGreetings">Welcome to the store!</h2>
     <h2 v-else>Thank you for visiting!</h2>
 
@@ -21,6 +21,13 @@
         {{ item.name }} - ${{ item.price.toFixed(2) }}
       </li>
     </ul>
+    <h3>v-model Example:</h3>
+    <input type="text" v-model="message">
+    <p>Message is: {{ message }}</p>
+  </div>
+
+  <div id="app2">
+    <p>{{msg}}</p>
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

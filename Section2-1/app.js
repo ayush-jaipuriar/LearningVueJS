@@ -1,4 +1,5 @@
-Vue.createApp({
+const app1 = Vue.createApp({
+    el: '#app1',
     data() {
       return {
         items: [
@@ -16,5 +17,18 @@ Vue.createApp({
         }
       };
     },
-  }).mount("#app");
+    methods: {
+      greetUser() {
+        alert(`Hello, ${this.user.name}! Welcome to our store.`);
+      }
+    }
+  }).mount("#app1");
+
+
+const app2 = new Vue({
+    el: '#app2',
+    data: {
+        msg: 'Greetings from App 2!'
+    }
+}).mount("#app2");
   
