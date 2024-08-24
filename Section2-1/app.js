@@ -25,9 +25,13 @@ const app1 = Vue.createApp({
   }).mount("#app1");
 
 
+  // Specify the element where the Vue instance will be mounted
 const app2 = new Vue({
     el: '#app2',
+
+    // Define the initial data for the component
     data: {
+        // Message displayed on the page
         msg: 'Greetings from App 2!'
     }
 }).mount("#app2");
