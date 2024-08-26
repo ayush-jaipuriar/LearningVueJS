@@ -1,36 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <!-- Title of the page -->
   <title>VueJS Course</title>
+
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
 <body>
+    <!-- First Vue.js component -->
   <div id="app1">
+        <!-- Conditional rendering based on showGreetings variable -->
     <h2 v-if="showGreetings">Welcome to the store!</h2>
     <h2 v-else>Thank you for visiting!</h2>
 
+        <!-- User information display -->
     <h3>User Info:</h3>
     <p>User City: {{ user.address?.city }}</p>
     <p v-if="user.address?.street">Street: {{ user.address.street }}</p>
 
+        <!-- Product list display -->
     <h3>Product List:</h3>
     <ul>
       <li v-for="item in items" :key="item.name">
         {{ item.name }} - ${{ item.price.toFixed(2) }}
       </li>
     </ul>
+
+    <!-- v-model example -->
     <h3>v-model Example:</h3>
     <input type="text" v-model="message">
     <p>Message is: {{ message }}</p>
   </div>
 
+    <!-- Second Vue.js component -->
   <div id="app2">
     <p>{{msg}}</p>
   </div>
 
+    <!-- Import Vue.js library -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Local script file -->
   <script src="app.js"></script>
 </body>
 
